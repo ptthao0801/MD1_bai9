@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="view"><br><br>
+<button type="button" value ="1" onclick="nhap(this.value)"> 1 </button>
+<button type="button" value ="2" onclick="nhap(this.value)"> 2 </button>
+<button type="button" value ="-" onclick="nhap(this.value)"> - </button>
+<button type="button" value ="=" onclick="bang(this.value)"> = </button>
+
+
+</body>
+</html>
+<script>
+    let xem = document.getElementById("view");
+    function nhap(a) {
+        xem.value += a;
+    }
+    let ketqua = eval(xem.value)
+    let ketqua2 = parseInt(ketqua)
+    function bang(b) {
+        xem.value = ketqua2
+    }
+</script>
