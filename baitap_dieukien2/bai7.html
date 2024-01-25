@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = prompt("điền tham số a của ax^2 + b = c")
+    let b = prompt("điền tham số b của ax^2 + b = c")
+    let c = prompt("điền tham số c của ax^2 + b = c")
+    let x = Math.sqrt((c-b)/a)
+    if ((c-b)/a>0) {
+        document.write("có 2 nghiệm")
+        document.write("<br>")
+        document.write("nghiệm 1: "+x)
+        document.write("<br>")
+        document.write("nghiệm 2: -"+x)
+    } else if ((c-b)/a==0) {
+        document.write("có 1 nghiệm")
+        document.write("<br>")
+        document.write("nghiệm là: "+0)
+    } else {
+        alert("vô nghiệm")
+    }
+</script>
