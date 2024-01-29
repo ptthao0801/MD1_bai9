@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage" src="./baitap_dieukien2/img/panda2.jpg" style="width:100px"  alt=""/>
+
+<!--<button onclick="changeImage()">Change Image</button>-->
+<button onclick="changeImg()">Change Image</button>
+
+<script>
+    // CÁCH 1
+    // var images = ["https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg"]; // Mảng chứa đường dẫn của các hình ảnh
+    // var currentImageIndex = 0; // Biến đếm để theo dõi hình ảnh hiện tại
+    //
+    // function changeImg() {
+    //     var image = document.getElementById("myImage");
+    //     currentImageIndex = (currentImageIndex + 1) % images.length; // Chuyển đến hình ảnh tiếp theo trong mảng
+    //     console.log(currentImageIndex)
+    //     image.src = images[currentImageIndex]; // Thay đổi đường dẫn của hình ảnh
+    // }
+
+    // CÁCH 2
+    // function changeImg(){
+    //     let i = 1
+    //     let img = document.getElementById("myImage")
+    //     img.src = `./baitap_dieukien2/img/panda${i}.jpg`
+    //     i++
+    //     // document.write("So i la :" + i)
+    //     //
+    //     // document.write(`So i la : ${i}`)
+    // }
+
+    // CÁCH 3
+    var images = ["https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg"]; // Mảng chứa đường dẫn của các hình ảnh
+    var currentImageIndex = 0; // Biến đếm để theo dõi hình ảnh hiện tại
+
+    function changeImg() {
+        var image = document.getElementById("myImage");
+        if (currentImageIndex<images.length) {
+            currentImageIndex++ // Chuyển đến hình ảnh tiếp theo trong mảng
+            console.log(currentImageIndex)
+            image.src = images[currentImageIndex]; // Thay đổi đường dẫn của hình ảnh
+        } else {
+            currentImageIndex=0
+        }
+    }
+</script>
+
+</body>
+</html>
